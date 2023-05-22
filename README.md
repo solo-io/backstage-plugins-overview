@@ -22,13 +22,10 @@ The Gloo Portal Backstage plugin provides an interface for teams to manage, secu
 yarn add --cwd packages/app @solo.io/dev-portal-backstage-plugin
 ```
 
-<!-- 3. Run `yarn install` from the Backstage root folder. -->
-
 2. In `./packages/app/src/App.tsx`, add these imports at the top of the file:
 
 ```tsx
 import { GlooPortalHomePage } from "@solo.io/dev-portal-backstage-plugin";
-// eslint-disable-next-line monorepo/no-internal-import
 import { GlooPortalApiDetailsPage } from "@solo.io/dev-portal-backstage-plugin/src/plugin";
 ```
 
@@ -56,28 +53,53 @@ Then add this to the `<SidebarScrollWrapper/>` element in that file.
 <SidebarItem icon={GlooIcon} to="gloo-portal" text="Gloo Portal" />
 ```
 
+4. Set the following variables in your `app-config.local.yaml` file to match your Gloo Portal and Keycloak setup before running Backstage:
+
+```yaml
+glooPortal:
+  # The URL of the Gloo Portal REST server.
+  # The value of this variable should be: <portal-server-url>/v1
+  # The default value is: "http://localhost:31080/v1".
+  portalServerUrl: "http://localhost:31080/v1"
+
+  # The oauth client id.
+  # In keycloak, this is shown in the client settings
+  # of your keycloak instances UI: <your-keycloak-url>/auth
+  clientId: ""
+
+  # The oauth client secret.
+  # In keycloak, this is shown in the client settings
+  # of your keycloak instances UI: <your-keycloak-url>/auth
+  clientSecret: ""
+
+  # This is the endpoint to get the oauth token.
+  # In keycloak, this is the `token_endpoint` property from:
+  # <your-keycloak-url>/auth/realms/<your-realm>/.well-known/openid-configuration
+  tokenEndpoint: ""
+```
+
 ### Screenshots
 
 Logged out view:
 
-![logged out](./assets/logged-out.png)
+![logged out](./readme_assets/logged-out.png)
 
 Logged in view:
 
-![logged in](./assets/logged-in.png)
+![logged in](./readme_assets/logged-in.png)
 
 Viewing a list of APIs:
 
-![API list](./assets/apis.png)
+![API list](./readme_assets/apis.png)
 
 Viewing an API using an OpenAPI schema viewer:
 
-![API details](./assets/api-details.png)
+![API details](./readme_assets/api-details.png)
 
 Viewing API usage plans:
 
-![usage plans and api keys](./assets/usage-plans.png)
+![usage plans and api keys](./readme_assets/usage-plans.png)
 
 Generating a new API key under a usage plan:
 
-![generating a new api key](./assets/generate-new-key.png)
+![generating a new api key](./readme_assets/generate-new-key.png)
