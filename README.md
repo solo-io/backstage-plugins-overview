@@ -44,7 +44,7 @@ Then add these routes to the `<FlatRoutes/>` element in that file:
 />
 ```
 
-5. In `./packages/app/src/components/Root/Root.tsx`, add these imports to the top of the file:
+3. In `./packages/app/src/components/Root/Root.tsx`, add these imports to the top of the file:
 
 ```tsx
 import { GlooIcon } from "@solo.io/dev-portal-backstage-plugin";
