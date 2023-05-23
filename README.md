@@ -1,20 +1,20 @@
-# Gloo Portal Backstage Plugin
+# Gloo Platform Portal Backstage Plugin
 
-As a part of [Gloo Platform](https://www.solo.io/products/gloo-platform/), [Gloo Portal](https://www.solo.io/products/gloo-portal/) provides a Kubernetes-native framework for managing the definitions of APIs, API client identity, and API policies that enables GitOps and CI/CD workflows. The portal abstracts the complexity and enables developers to publish, document, share, discover, and use APIs.
+As a part of [Gloo Platform](https://www.solo.io/products/gloo-platform/), [Gloo Platform Portal](https://www.solo.io/products/gloo-portal/) provides a Kubernetes-native framework for managing the definitions of APIs, API client identity, and API policies that enables GitOps and CI/CD workflows. The portal abstracts the complexity and enables developers to publish, document, share, discover, and use APIs.
 
-The Gloo Portal Backstage plugin provides an interface for teams to manage, secure, and share APIs. This functionality is enabled through Gloo Portal's built in REST API, and configurable ext-auth policies.
+The Gloo Platform Portal Backstage plugin provides an interface for teams to manage, secure, and share APIs. This functionality is enabled through Gloo Platform Portal's built in REST API, and configurable ext-auth policies.
 
 [See a demo of Gloo Platform Portal in action here](https://www.youtube.com/watch?v=YL1aqjZDqGQ&t=0)
 
 ## Backstage Plugin Features
 
-- View OpenAPI docs for your Gloo Portal APIs using Swagger UI and Redoc UI.
-- View details about your Gloo Portal API usage plans.
+- View OpenAPI docs for your Gloo Platform Portal APIs using Swagger UI and Redoc UI.
+- View details about your Gloo Platform Portal API usage plans.
 - View, create, and delete API keys for any of your usage plans.
 
 ## Setup
 
-1. Install the [Gloo Portal Backstage plugin](https://www.npmjs.com/package/@solo.io/dev-portal-backstage-plugin) into your Backstage app:
+1. Install the [Gloo Platform Portal Backstage plugin](https://www.npmjs.com/package/@solo.io/dev-portal-backstage-plugin) into your Backstage app:
 
 ```bash
 yarn add --cwd packages/app @solo.io/dev-portal-backstage-plugin
@@ -32,11 +32,11 @@ import {
 Then add these routes to the `<FlatRoutes/>` element in that file:
 
 ```tsx
-<Route path="/gloo-portal" element={<GlooPortalHomePage />} />
-<Route path="/gloo-portal/apis" element={<GlooPortalHomePage />} />
-<Route path="/gloo-portal/usage-plans" element={<GlooPortalHomePage />} />
+<Route path="/gloo-platform-portal" element={<GlooPortalHomePage />} />
+<Route path="/gloo-platform-portal/apis" element={<GlooPortalHomePage />} />
+<Route path="/gloo-platform-portal/usage-plans" element={<GlooPortalHomePage />} />
 <Route
-  path="/gloo-portal/apis/:apiId"
+  path="/gloo-platform-portal/apis/:apiId"
   element={<GlooPortalApiDetailsPage />}
 />
 ```
@@ -50,14 +50,18 @@ import { GlooIcon } from "@solo.io/dev-portal-backstage-plugin";
 Then add this to the `<SidebarScrollWrapper/>` element in that file.
 
 ```tsx
-<SidebarItem icon={GlooIcon} to="gloo-portal" text="Gloo Portal" />
+<SidebarItem
+  icon={GlooIcon}
+  to="gloo-platform-portal"
+  text="Gloo Platform Portal"
+/>
 ```
 
-4. Set the following variables in your `app-config.local.yaml` file to match your Gloo Portal and Keycloak setup before running Backstage:
+4. Set the following variables in your `app-config.local.yaml` file to match your Gloo Platform Portal and Keycloak setup before running Backstage:
 
 ```yaml
-glooPortal:
-  # The URL of the Gloo Portal REST server.
+glooPlatformPortal:
+  # The URL of the Gloo Platform Portal REST server.
   # The value of this variable should be: <portal-server-url>/v1
   # The default value is: "http://localhost:31080/v1".
   portalServerUrl: "http://localhost:31080/v1"
