@@ -23,8 +23,10 @@ yarn add --cwd packages/app @solo.io/dev-portal-backstage-plugin
 2. In `./packages/app/src/App.tsx`, add these imports at the top of the file:
 
 ```tsx
-import { GlooPortalHomePage } from "@solo.io/dev-portal-backstage-plugin";
-import { GlooPortalApiDetailsPage } from "@solo.io/dev-portal-backstage-plugin/src/plugin";
+import {
+  GlooPortalHomePage,
+  GlooPortalApiDetailsPage,
+} from "@solo.io/dev-portal-backstage-plugin";
 ```
 
 Then add these routes to the `<FlatRoutes/>` element in that file:
@@ -76,7 +78,7 @@ glooPortal:
   tokenEndpoint: ""
 ```
 
-### Screenshots
+## Screenshots
 
 Logged out view:
 
