@@ -1,7 +1,5 @@
 # Gloo Portal Backstage Plugin
 
-# Background
-
 As a part of [Gloo Platform](https://www.solo.io/products/gloo-platform/), [Gloo Portal](https://www.solo.io/products/gloo-portal/) provides a Kubernetes-native framework for managing the definitions of APIs, API client identity, and API policies that enables GitOps and CI/CD workflows. The portal abstracts the complexity and enables developers to publish, document, share, discover, and use APIs.
 
 The Gloo Portal Backstage plugin provides an interface for teams to manage, secure, and share APIs. This functionality is enabled through Gloo Portal's built in REST API, and configurable ext-auth policies.
