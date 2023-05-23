@@ -4,7 +4,7 @@ As a part of [Gloo Platform](https://www.solo.io/products/gloo-platform/), [Gloo
 
 The Gloo Portal Backstage plugin provides an interface for teams to manage, secure, and share APIs. This functionality is enabled through Gloo Portal's built in REST API, and configurable ext-auth policies.
 
-[See a demo of Gloo Platform Portal in action here](https://www.youtube.com/watch?v=YL1aqjZDqGQ)
+[See a demo of Gloo Platform Portal in action here](https://www.youtube.com/watch?v=YL1aqjZDqGQ&t=0)
 
 ## Backstage Plugin Features
 
