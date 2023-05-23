@@ -50,11 +50,7 @@ import { GlooIcon } from "@solo.io/dev-portal-backstage-plugin";
 Then add this to the `<SidebarScrollWrapper/>` element in that file.
 
 ```tsx
-<SidebarItem
-  icon={GlooIcon}
-  to="gloo-platform-portal"
-  text="Gloo Platform Portal"
-/>
+<SidebarItem icon={GlooIcon} to="gloo-platform-portal" text="Gloo Portal" />
 ```
 
 4. Set the following variables in your `app-config.local.yaml` file to match your Gloo Platform Portal and Keycloak setup before running Backstage:
